@@ -1,0 +1,9 @@
+# Gitignore File for CerStruct.sh
+
+# Folders
+build/
+Release/
+
+# Files
+*.o
+*.a
