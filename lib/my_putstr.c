@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT
+** EPITECH PROJECT, 2020
 ** CerStruct
 ** File description:
 ** my_putstr
