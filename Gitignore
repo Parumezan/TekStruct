@@ -2,7 +2,6 @@
 
 # Folders
 build/
-Release/
 
 # Files
 *.o

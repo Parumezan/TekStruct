@@ -8,6 +8,7 @@
 SRC = 	lib/my_putchar.c	\
 		lib/my_putstr.c		\
 		lib/my_putnbr.c		\
+		lib/my_strlen.c		\
 		src/main.c 			
 
 OUTPUT = CerStruct #name of your binary

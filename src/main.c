@@ -7,6 +7,6 @@
 
 #include "cerstruct.h"
 
-int main(int argc, char const *argv[])
+int main(int ac, char const **av)
 {
 }
