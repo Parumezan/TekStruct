@@ -11,6 +11,8 @@ void my_putnbr(int nb)
 {
     int check = 1;
 
+    if (nb == -2147483648) {
+        my_putstr("-2147483648");
     if (nb < 0) {
         my_putchar('-');
         nb *= -1;
