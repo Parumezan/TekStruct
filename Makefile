@@ -16,7 +16,7 @@ OUTPUT = CerStruct #name of your binary
 
 BUILD_DIR = build
 
-CFLAGS = -I include/ -Wall -Wextra
+CFLAGS = -I include/ -Wall -Wextra -g
 
 OBJ	= $(SRC:%.c=$(BUILD_DIR)/%.o)
 
