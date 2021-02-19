@@ -20,6 +20,8 @@ CFLAGS = -I include/ -Wall -Wextra -g
 
 OBJ	= $(SRC:%.c=$(BUILD_DIR)/%.o)
 
+PYTHON = python3 ./salade_de_fruits/banane.py
+
 all: $(OUTPUT)
 
 $(BUILD_DIR)/%.o: %.c
@@ -42,6 +44,11 @@ pushgit: fclean #with git repo
 	git commit -m "$(filter-out $@, $(MAKECMDGOALS))"
 	git push
 
+funnypush: fclean #funny commit
+	git add -A
+	git commit -m "$(PYTHON)"
+	git push
+
 re: fclean all
 
-.PHONY: all clean fclean pushgit re
+.PHONY: all clean fclean pushgit funnypush re
