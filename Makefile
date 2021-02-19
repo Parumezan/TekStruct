@@ -20,7 +20,7 @@ CFLAGS = -I include/ -Wall -Wextra -g
 
 OBJ	= $(SRC:%.c=$(BUILD_DIR)/%.o)
 
-PYTHON = python3 ./salade_de_fruits/banane.py
+PYTHON = python3 ./ananas/banane.py
 
 all: $(OUTPUT)
 
