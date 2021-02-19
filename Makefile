@@ -44,7 +44,7 @@ pushgit: fclean #with git repo
 	git commit -m "$(filter-out $@, $(MAKECMDGOALS))"
 	git push
 
-funnypush: fclean #funny commit
+funnypush: fclean #funny commit by script in python
 	git add -A
 	$(PYTHON) > someshit
 	git commit -F someshit
