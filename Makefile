@@ -46,7 +46,9 @@ pushgit: fclean #with git repo
 
 funnypush: fclean #funny commit
 	git add -A
-	git commit -m "$(PYTHON)"
+	$(PYTHON) > someshit
+	git commit -F someshit
+	rm someshit
 	git push
 
 re: fclean all
