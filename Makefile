@@ -10,17 +10,23 @@ SRC = 	lib/my_putchar.c	\
 		lib/my_putnbr.c		\
 		lib/my_strlen.c		\
 		lib/my_convert.c	\
+\
 		src/main.c 			
 
-OUTPUT = CerStruct #name of your binary
-
 BUILD_DIR = build
-
-CFLAGS = -I include/ -Wall -Wextra -g
-
 OBJ	= $(SRC:%.c=$(BUILD_DIR)/%.o)
-
 PYTHON = python3 ./ananas/banane.py
+
+## Flags
+CFLAGS = -I include/ -Wall -Wextra
+DFLAGS = -g
+
+## Binary Name
+OUTPUT = CerStruct
+
+.PHONY: all clean fclean debug pushgit funnypush re
+
+## Rules
 
 all: $(OUTPUT)
 
@@ -38,13 +44,22 @@ clean:
 
 fclean: clean
 	rm -f $(OUTPUT)
+	rm -f trace
 
-pushgit: fclean #with git repo
+
+## Debug
+debug: $(OBJ)
+	gcc -o $(OUTPUT) $(OBJ) $(DFLAGS)
+	valgrind --leak-check=full --track-origins=yes -s ./$(OUTPUT) $(filter-out $@, $(MAKECMDGOALS)) 2> trace
+
+## Git Push
+pushgit: fclean
 	git add -A
 	git commit -m "$(filter-out $@, $(MAKECMDGOALS))"
 	git push
 
-funnypush: fclean #funny random commit
+## Funny random commit
+funnypush: fclean
 	git add -A
 	$(PYTHON) > someshit
 	git commit -F someshit
@@ -52,5 +67,3 @@ funnypush: fclean #funny random commit
 	git push
 
 re: fclean all
-
-.PHONY: all clean fclean pushgit funnypush re

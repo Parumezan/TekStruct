@@ -5,3 +5,4 @@ Release/
 # Files
 *.o
 *.a
+trace
