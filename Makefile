@@ -17,12 +17,12 @@ BUILD_DIR = build
 OBJ	= $(SRC:%.c=$(BUILD_DIR)/%.o)
 PYTHON = python3 ./ananas/banane.py
 
+## Binary Name
+OUTPUT = CerStruct
+
 ## Flags
 CFLAGS = -I include/ -Wall -Wextra
 DFLAGS = -g
-
-## Binary Name
-OUTPUT = CerStruct
 
 .PHONY: all clean fclean debug pushgit funnypush re
 
@@ -37,7 +37,6 @@ $(BUILD_DIR)/%.o: %.c
 
 $(OUTPUT): $(OBJ)
 	gcc -o $(OUTPUT) $(OBJ)
-	#ar rc $(OUTPUT) $(OBJ)
 
 clean:
 	rm -f $(OBJ)
@@ -45,7 +44,6 @@ clean:
 fclean: clean
 	rm -f $(OUTPUT)
 	rm -f trace
-
 
 ## Debug
 debug: $(OBJ)
