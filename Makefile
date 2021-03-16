@@ -7,6 +7,7 @@
 
 SRC = 	lib/my_putchar.c	\
 		lib/my_putstr.c		\
+		lib/my_putarray.c	\
 		lib/my_putnbr.c		\
 		lib/my_strlen.c		\
 		lib/my_convert.c	\

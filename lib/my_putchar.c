@@ -5,7 +5,7 @@
 ** my_putchar
 */
 
-#include <unistd.h>
+#include "cerstruct.h"
 
 void my_putchar(char c)
 {
