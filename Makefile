@@ -24,8 +24,6 @@ OUTPUT = CerStruct
 CFLAGS = -I include/ -Wall -Wextra
 DFLAGS = -g
 
-.PHONY: all clean fclean debug pushgit funnypush re
-
 ## Rules
 
 all: $(OUTPUT)
@@ -46,7 +44,8 @@ fclean: clean
 	rm -f trace
 
 ## Debug
-debug: $(OBJ)
+debug: CFLAGS += -g
+debug: fclean $(OBJ)
 	gcc -o $(OUTPUT) $(OBJ) $(DFLAGS)
 	valgrind --leak-check=full --track-origins=yes -s ./$(OUTPUT) $(filter-out $@, $(MAKECMDGOALS)) 2> trace
 
@@ -65,3 +64,5 @@ funnypush: fclean
 	git push
 
 re: fclean all
+
+.PHONY: all clean fclean debug pushgit funnypush re
