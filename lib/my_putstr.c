@@ -9,10 +9,6 @@
 
 void my_putstr(char *str)
 {
-    int count = 0;
-
-    while (str[count] != '\0') {
-        my_putchar(str[count]);
-        count++;
-    }
+    for (int cpt = 0; str[cpt] != '\0'; cpt++)
+        write(1, &str[cpt], 1);
 }
