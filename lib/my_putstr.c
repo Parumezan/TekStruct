@@ -5,7 +5,7 @@
 ** my_putstr
 */
 
-#include "cerstruct.h"
+#include "tekstruct.h"
 
 void my_putstr(char *str)
 {

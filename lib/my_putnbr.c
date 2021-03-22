@@ -5,7 +5,7 @@
 ** my_putnbr
 */
 
-#include "cerstruct.h"
+#include "tekstruct.h"
 
 void my_putnbr(int nb)
 {

@@ -5,7 +5,7 @@
 ** my_putarray
 */
 
-#include "cerstruct.h"
+#include "tekstruct.h"
 
 void my_putarray(char **array)
 {
