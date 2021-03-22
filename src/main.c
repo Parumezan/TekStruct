@@ -5,7 +5,7 @@
 ** main
 */
 
-#include "cerstruct.h"
+#include "tekstruct.h"
 
 int main(int ac, char **av)
 {
