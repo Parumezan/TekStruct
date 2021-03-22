@@ -1,6 +1,6 @@
 ##
 ## EPITECH PROJECT, 2020
-## CerStruct
+## TekStruct
 ## File description:
 ## Makefile
 ##
@@ -19,7 +19,7 @@ OBJ	= $(SRC:%.c=$(BUILD_DIR)/%.o)
 PYTHON = python3 ./ananas/banane.py
 
 ## Binary Name
-OUTPUT = CerStruct
+OUTPUT = TekStruct
 
 ## Flags
 CFLAGS = -I include/ -Wall -Wextra

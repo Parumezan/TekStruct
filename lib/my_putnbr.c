@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2020
-** CerStruct
+** TekStruct
 ** File description:
 ** my_putnbr
 */

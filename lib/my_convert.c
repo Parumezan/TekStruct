@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2020
-** B-CPE-110-REN-1-1-pushswap-jean-baptiste.brocherie
+** TekStruct
 ** File description:
 ** my_convert
 */

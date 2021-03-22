@@ -2,7 +2,7 @@
 from bs4 import BeautifulSoup
 import requests
 
-# Get Wikipedia URL
+# Get URL
 url="http://whatthecommit.com/"
 
 # Make a GET request to fetch the raw HTML content

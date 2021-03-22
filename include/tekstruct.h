@@ -2,11 +2,11 @@
 ** EPITECH PROJECT, 2020
 ** CerStruct
 ** File description:
-** cerstruct // header
+** tekstruct
 */
 
-#ifndef CERSTRUCT_H_
-#define CERSTRUCT_H_
+#ifndef TEKSTRUCT_H_
+#define TEKSTRUCT_H_
 
 //Defines:
     //Error:
@@ -23,4 +23,4 @@
         int my_strlen(char *str);
         int my_convert(char *str);
 
-#endif /* !CERSTRUCT_H_ */
+#endif /* !TEKSTRUCT_H_ */

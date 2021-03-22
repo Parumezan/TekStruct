@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2021
-** CerStruct
+** TekStruct
 ** File description:
 ** my_putarray
 */
