@@ -9,6 +9,5 @@
 
 void my_putstr(char *str)
 {
-    for (int cpt = 0; str[cpt] != '\0'; cpt++)
-        write(1, &str[cpt], 1);
+    write(1, str, my_strlen(str));
 }
