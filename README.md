@@ -6,4 +6,4 @@
     \/_/   \/_____/   \/_/\/_/   \/_____/     \/_/   \/_/ /_/   \/_____/   \/_____/     \/_/ 
 ```
 
-Created a minimalist structure for an Epitech project with an efficient Makefile.
+Created a structure for an Epitech project with an efficient Makefile.

@@ -1,8 +1,4 @@
-# Folders
-build/
-Release/
+Gitignore for Tekstruct
 
-# Files
-*.o
-*.a
-trace
+# Folders
+Release/

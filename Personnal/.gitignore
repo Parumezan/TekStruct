@@ -1,0 +1,8 @@
+# Folders
+build/
+Release/
+
+# Files
+*.o
+*.a
+trace

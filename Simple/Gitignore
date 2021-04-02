@@ -1,0 +1,9 @@
+# Gitignore File
+
+# Folders
+build/
+
+# Files
+*.o
+*.a
+trace
