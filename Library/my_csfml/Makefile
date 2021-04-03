@@ -5,24 +5,13 @@
 ## Makefile
 ##
 
-SRC =	my_stdio/my_convert.c		\
-		my_stdio/my_putchar.c		\
-		my_stdio/my_putstr.c		\
-		my_stdio/my_putnbr.c		\
-		my_stdio/my_strlen.c		\
-\
-		my_stdlib/my_calloc.c		\
-\
-		my_tools/my_openread.c		\
-		my_tools/my_iterchar.c		\
-		my_tools/my_strarray.c		\
-		my_tools/my_putarray.c
+SRC =
 
 BUILD_DIR = build
 OBJ = $(SRC:%.c=$(BUILD_DIR)/%.o)
 CFLAGS = -I include/
 
-OUTPUT = lib_my_libc.a
+OUTPUT = lib_my_csfml.a
 
 all: $(OUTPUT)
 
@@ -34,7 +23,7 @@ $(BUILD_DIR)/%.o: %.c
 $(OUTPUT): $(OBJ)
 	ar rc $(OUTPUT) $(OBJ)
 	cp $(OUTPUT) ../exec
-	cp include/my_libc.h ../hlib
+	cp include/my_csfml.h ../hlib
 
 clean:
 	rm -f $(OBJ)
@@ -42,7 +31,7 @@ clean:
 fclean: clean
 	rm -f $(OUTPUT)
 	rm -f ../exec/$(OUTPUT)
-	rm -f ../hlib/my_libc.h
+	rm -f ../hlib/my_csfml.h
 
 re: fclean all
 
