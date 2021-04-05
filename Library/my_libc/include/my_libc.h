@@ -40,7 +40,7 @@
         void my_putnbr(int nb);
         
         /// \brief Displays the string given as an argument.
-        /// \param str The letter
+        /// \param str Your string
         void my_putstr(char *str);
         
         /// \brief Return the lenght of your string given as an argument.
