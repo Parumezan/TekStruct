@@ -50,6 +50,12 @@
 
     //my_tools
 
+        /// \brief Return the number of a percent.
+        /// \param value Your first value
+        /// \param total The total
+        /// \return (int) Your percentage
+        int my_percent(int value, int total);
+
         /// \brief Return the number of in a string (ascii conversion) 
         /// given as an argument.
         /// \param str Your string - number

@@ -13,6 +13,7 @@ SRC =	my_stdio/my_putchar.c		\
 		my_stdlib/my_calloc.c		\
 \
 		my_tools/my_convert.c		\
+		my_tools/my_percent.c		\
 		my_tools/my_openread.c		\
 		my_tools/my_iterchar.c		\
 		my_tools/my_strarray.c		\
