@@ -68,4 +68,4 @@ h_debug:
 
 re: fclean all
 
-.PHONY: all clean fclean lib debug pushgit head re
+.PHONY: all clean fclean lib debug pushgit h_normal h_debug re
