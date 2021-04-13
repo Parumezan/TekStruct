@@ -46,8 +46,7 @@ fclean: clean
 
 ## Debug
 debug: CFLAGS += -g
-debug: fclean $(OBJ)
-	gcc -o $(OUTPUT) $(OBJ) $(DFLAGS)
+debug: fclean head lib $(OUTPUT)
 	valgrind --leak-check=full --track-origins=yes -s ./$(OUTPUT) $(filter-out $@, $(MAKECMDGOALS)) 2> trace
 
 ## Git Push
