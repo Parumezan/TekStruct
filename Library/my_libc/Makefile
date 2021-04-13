@@ -25,7 +25,7 @@ CFLAGS = -I include/
 
 OUTPUT = lib_my_libc.a
 
-all: $(OUTPUT)
+all: head $(OUTPUT)
 
 $(BUILD_DIR)/%.o: %.c
 	@mkdir -p $(@D)
@@ -44,6 +44,12 @@ fclean: clean
 	rm -f $(OUTPUT)
 	rm -f ../exec/$(OUTPUT)
 	rm -f ../hlib/my_libc.h
+
+head:
+	@echo "8b    d8 Yb  dP            88     88 88PPYb  dPPPb8        "
+	@echo "88b  d88  YbdP             88     88 88__dP dP   'P        "
+	@echo "88YbdP88   8P              88  .o 88 88PPYb Yb      .o. .o."
+	@echo "88 YY 88  dP    oooooooooo 88ood8 88 88oodP  YboodP 'P' 'P'"
 
 re: fclean all
 

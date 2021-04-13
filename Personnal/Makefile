@@ -23,7 +23,6 @@ OUTPUT = TekStruct
 
 ## Flags
 CFLAGS = -I include/ -Wall -Wextra
-DFLAGS = -g
 
 ## Rules
 
@@ -46,7 +45,7 @@ fclean: clean
 
 ## Debug
 debug: CFLAGS += -g
-debug: fclean head lib $(OUTPUT)
+debug: fclean lib $(OUTPUT)
 	valgrind --leak-check=full --track-origins=yes -s ./$(OUTPUT) $(filter-out $@, $(MAKECMDGOALS)) 2> trace
 
 ## Git Push
