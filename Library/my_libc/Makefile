@@ -17,6 +17,7 @@ SRC =	my_stdio/my_putchar.c		\
 		my_tools/my_openread.c		\
 		my_tools/my_iterchar.c		\
 		my_tools/my_strarray.c		\
+		my_tools/my_lensdecal.c		\
 		my_tools/my_putarray.c
 
 BUILD_DIR = build

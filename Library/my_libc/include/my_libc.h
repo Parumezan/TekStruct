@@ -75,9 +75,16 @@
         /// \brief Look at the iteration of a letter given 
         /// as an argument in a string. 
         /// \param str Your string
-        /// \param iter (char) Your letter
+        /// \param iter (char) Your delimiter / letter
         /// \return {nb} - Number of the iteration
         int my_iterchar(char *str, char iter);
+
+        /// \brief Find the longest string in the given string 
+        /// delimited by a given delimiter.
+        /// \param str Your string
+        /// \param iter (char) Your delimiter
+        /// \return {nb} - Number of the iteration
+        int my_lensdecal(char *str, char decal);
 
         /// \brief Takes a string and with a separator letter, 
         /// makes it a malloc array.
