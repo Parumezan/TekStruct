@@ -48,12 +48,6 @@ debug: CFLAGS += -g
 debug: fclean lib h_debug $(OUTPUT)
 	valgrind --leak-check=full --track-origins=yes -s ./$(OUTPUT) $(filter-out $@, $(MAKECMDGOALS)) 2> trace
 
-## Git Push
-pushgit: fclean
-	git add -A
-	git commit -m "$(filter-out $@, $(MAKECMDGOALS))"
-	git push
-
 h_normal:
 	@echo " dPPPb8  dPPYb  8b    d8 88PPYb 88 88     88 88b 88  dPPPb8        "
 	@echo "dP   'P dP   Yb 88b  d88 88__dP 88 88     88 88Yb88 dP   'P        "

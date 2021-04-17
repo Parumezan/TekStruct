@@ -47,12 +47,6 @@ debug: CFLAGS += -g
 debug: fclean head lib $(OUTPUT)
 	valgrind --leak-check=full --track-origins=yes -s ./$(OUTPUT) $(filter-out $@, $(MAKECMDGOALS)) 2> trace
 
-## Git Push
-pushgit: fclean
-	git add -A
-	git commit -m "$(filter-out $@, $(MAKECMDGOALS))"
-	git push
-
 re: fclean all
 
 .PHONY: all clean fclean debug pushgit re
