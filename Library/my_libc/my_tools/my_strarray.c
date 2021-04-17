@@ -27,12 +27,13 @@ char **my_strarray(char *str, char decal)
 {
     char **array;
     int size_y = my_iterchar(str, decal) + 1;
+    int size_x = my_lensdecal(str, decal);
 
     array = malloc(sizeof(char *) * (size_y + 1));
     if (!array)
         return NULL;
     for (size_t cpt = 0; cpt < (size_t)size_y; cpt++) {
-        array[cpt] = my_calloc(sizeof(char) * (2048), '\0');
+        array[cpt] = my_calloc(sizeof(char) * (size_x + 1), '\0');
         if (!array[cpt])
             return NULL;
     }
