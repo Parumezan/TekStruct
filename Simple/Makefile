@@ -49,4 +49,4 @@ debug: fclean head lib $(OUTPUT)
 
 re: fclean all
 
-.PHONY: all clean fclean debug pushgit re
+.PHONY: all clean fclean debug re
