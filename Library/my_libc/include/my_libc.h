@@ -18,17 +18,20 @@
     #include <stdlib.h>
 //Structures:
 //Prototypes:
+
+    //-------------------------------------------------------------
     //my_stdlib
 
         /// \brief Malloc a certain size and initialize it with 
         /// the letter given as argument.
         /// WARNING : Don't forget to free the returned malloc pointer.
-        /// \param size The size you give
+        /// \param size The size you gave
         /// \param fill The initialize letter
         /// \return Returns a malloc initialized by the 
         /// letter given as argument
         void *my_calloc(size_t size, char fill);
 
+    //-------------------------------------------------------------
     //my_stdio
 
         /// \brief Displays the letter given as an argument.
@@ -48,6 +51,15 @@
         /// \return The length of the string
         int my_strlen(char *str);
 
+    //-------------------------------------------------------------
+    //my_string
+
+        /// \brief Copy the string you gave in argument.
+        /// \param str Your string you gave
+        /// \return (char *) Your string copy
+        char *my_strcpy(char *str);
+
+    //-------------------------------------------------------------
     //my_tools
 
         /// \brief Return the number of a percent.
@@ -79,19 +91,32 @@
         /// \return {nb} - Number of the iteration
         int my_iterchar(char *str, char iter);
 
-        /// \brief Find the longest string in the given string 
-        /// delimited by a given delimiter.
+        /// \brief Size of the largest string delimited 
+        /// by a delimiter in youre string.
         /// \param str Your string
-        /// \param iter (char) Your delimiter
-        /// \return {nb} - Number of the iteration
-        int my_lensdecal(char *str, char decal);
+        /// \param decal (char) Your delimiter
+        /// \return {nb} - len of the largest string
+        int my_lenintostr(char *str, char decal);
 
         /// \brief Takes a string and with a separator letter, 
         /// makes it a malloc array.
         /// WARNING : Don't forget to free the returned 2D-Array.
-        /// \param str The string you give so that it becomes an array
+        /// \param str The string you gave so that it becomes an array
         /// \param decal The letter to separate your string
         /// \return Return a malloc array with the content of the string
         char **my_strarray(char *str, char decal);
+
+        /// \brief Fill an array with a str, with a break element.
+        /// \param str The string you gave so that it becomes an array
+        /// \param array The array you gave to fill in
+        /// \param decal The letter to separate your string into an array
+        void my_fillstrarray(char *str, char **array, char decal);
+
+        /// \brief Copy an array into another array.
+        /// WARNING : Don't forget to free the returned 2D-Array.
+        /// \param array The array you gave to copy
+        /// \return Return a malloc array with the 
+        /// content of the array you gave
+        char **my_arraycopy(char **original);
 
 #endif /* !MY_LIBC_H_ */

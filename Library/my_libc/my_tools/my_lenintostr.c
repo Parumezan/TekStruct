@@ -2,12 +2,12 @@
 ** EPITECH PROJECT, 2021
 ** TekStruct
 ** File description:
-** my_lensdecal
+** my_lenintostr
 */
 
-#include "tekstruct.h"
+#include "my_libc.h"
 
-int my_lensdecal(char *str, char decal)
+int my_lenintostr(char *str, char decal)
 {
     int count = 1;
     int check = 0;

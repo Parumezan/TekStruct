@@ -12,12 +12,16 @@ SRC =	my_stdio/my_putchar.c		\
 \
 		my_stdlib/my_calloc.c		\
 \
+		my_string/my_strcpy.c		\
+\
 		my_tools/my_convert.c		\
 		my_tools/my_percent.c		\
 		my_tools/my_openread.c		\
 		my_tools/my_iterchar.c		\
 		my_tools/my_strarray.c		\
-		my_tools/my_lensdecal.c		\
+		my_tools/my_lenintostr.c	\
+		my_tools/my_fillstrarray.c	\
+		my_tools/my_arraycopy.c		\
 		my_tools/my_putarray.c
 
 BUILD_DIR = build
