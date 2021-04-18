@@ -11,7 +11,7 @@ char **my_strarray(char *str, char decal)
 {
     char **array;
     int size_y = my_iterchar(str, decal) + 1;
-    int size_x = strcalclenght(str, decal);
+    int size_x = my_lenintostr(str, decal);
     int len = my_strlen(str) - 1;
 
     if (str[len] == decal)
