@@ -16,7 +16,7 @@ OUTPUT = TekStruct
 ## Flags
 CFLAGS = -Wall -Wextra -I ./include/ -I ./lib/hlib 
 LDFLAGS = -L./lib/exec	\
-#-l _my_libc
+-l _my_libbox
 
 ## Rules
 
