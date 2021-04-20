@@ -119,4 +119,19 @@
         /// content of the array you gave
         char **my_arraycopy(char **original);
 
+        /// \brief Copy an array into another array.
+        /// \param array The array you gave to copy
+        /// \return Return a malloc array with the 
+        /// content of the array you gave
+        void my_fillintarray(int **array, int fillup, int limit_n, int limit_end);
+        
+        /// \brief Copy an array into an int array.
+        /// WARNING : Don't forget to free the returned 2D-Array.
+        /// \param array (char **) The array you gave to copy
+        /// \param limit_n The limit / '\n' of an char **array
+        /// \param limit_end The limit / '\0' of an char **array
+        /// \return Return a malloc array with the 
+        /// content of the array you gave
+        int **my_arrintarray(char **original, int limit_n, int limit_end);
+
 #endif /* !MY_LIBC_H_ */
