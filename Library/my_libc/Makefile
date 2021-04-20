@@ -22,6 +22,8 @@ SRC =	my_stdio/my_putchar.c		\
 		my_tools/my_lenintostr.c	\
 		my_tools/my_fillstrarray.c	\
 		my_tools/my_arraycopy.c		\
+		my_tools/my_fillintarray.c	\
+		my_tools/my_arrintarray.c	\
 		my_tools/my_putarray.c
 
 BUILD_DIR = build
