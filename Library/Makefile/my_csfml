@@ -6,10 +6,13 @@
 ##
 
 all:
+	make -C my_csfml/
 
 clean:
+	make clean -C my_csfml/
 
 fclean:
+	make fclean -C my_csfml/
 
 re: clean fclean all
 

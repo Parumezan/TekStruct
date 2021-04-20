@@ -1,0 +1,19 @@
+##
+## EPITECH PROJECT, 2021
+## TekStruct
+## File description:
+## Makefile LibraryManager
+##
+
+all:
+	make -C my_libbox/
+
+clean:
+	make clean -C my_libbox/
+
+fclean:
+	make fclean -C my_libbox/
+
+re: clean fclean all
+
+.PHONY: all clean fclean re

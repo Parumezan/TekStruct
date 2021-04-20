@@ -5,7 +5,30 @@
 ## Makefile
 ##
 
-SRC =	
+SRC =	\
+		my_array/my_arraycopy.c			\
+		my_array/my_arrintarray.c		\
+		my_array/my_fillintarray.c		\
+		my_array/my_fillstrarray.c		\
+		my_array/my_strarray.c			\
+\
+		my_display/my_putchar.c			\
+		my_display/my_putnbr.c			\
+		my_display/my_putstr.c			\
+		my_display/my_putarray.c		\
+\
+		my_files/my_openread.c			\
+\
+		my_maths/my_percent.c			\
+\
+		my_memory/my_calloc.c			\
+\
+		my_string/my_iterchar.c			\
+		my_string/my_lenintostr.c		\
+		my_string/my_strcpy.c			\
+		my_string/my_strlen.c			\
+\
+		my_tools/my_convert.c
 
 BUILD_DIR = build
 OBJ = $(SRC:%.c=$(BUILD_DIR)/%.o)
@@ -23,7 +46,7 @@ $(BUILD_DIR)/%.o: %.c
 $(OUTPUT): $(OBJ)
 	ar rc $(OUTPUT) $(OBJ)
 	cp $(OUTPUT) ../exec
-	cp include/my_libbox ../hlib
+	cp include/my_libbox.h ../hlib
 
 clean:
 	rm -f $(OBJ)

@@ -13,6 +13,7 @@
         #define MY_NORMAL 0;
         #define MY_ERROR 84;
 //Includes:
+    #include "my_libbox.h"
     #include <unistd.h>
     #include <stdlib.h>
 //Structures:
