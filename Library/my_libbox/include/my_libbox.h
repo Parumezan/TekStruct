@@ -161,6 +161,12 @@
         /// \return The length of the string
         int my_strlen(char *str);
 
+        /// \brief Copy the string you want into another string.
+        /// \param original Original string you gave
+        /// \param add Your string you gave to add
+        /// \return (char *) Your entire string
+        char *my_concatstring(char *original, char *add);
+
     //-------------------------------------------------------------
     //my_tools
 
