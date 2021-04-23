@@ -15,6 +15,7 @@ DIR *my_openfolder(char *folderpath)
     if (!folder) {
         my_putstrerror("ERROR: There is no folder ");
         my_putstrerror(folderpath);
+        my_puterror('\n');
         return NULL;
     }
     return folder;

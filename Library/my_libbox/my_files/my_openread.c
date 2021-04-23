@@ -13,7 +13,7 @@ static int readfile(int fd, char *str, struct stat s)
 
     check = read(fd, str, s.st_size);
     if (check == -1 || s.st_size == 0) {
-        my_putstr("ERROR: The file is empty\n");
+        my_putstrerror("ERROR: The file is empty.\n");
         return 84;
     }
     return 0;
@@ -27,7 +27,7 @@ char *my_openread(char *filepath)
 
     fd = open(filepath, O_RDONLY);
     if (fd == -1) {
-        my_putstr("ERROR: The file won't open\n");
+        my_putstrerror("ERROR: The file won't open.\n");
         return NULL;
     }
     stat(filepath, &s);

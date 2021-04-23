@@ -70,7 +70,7 @@
 
         /// \brief Displays the letter argument in the error output.
         /// \param c The letter
-        void my_putchar(char c);
+        void my_puterror(char c);
 
         /// \brief Displays the number given as an argument.
         /// \param nb The number
@@ -98,6 +98,7 @@
         char *my_openread(char *filepath);
 
         /// \brief Open a folder using dirent
+        /// WARNING : Don't forget to close the returned folder.
         /// \param filepath your folder filepath
         /// \return a DIR *folder for another functions.
         DIR *my_openfolder(char *folderpath);
@@ -156,6 +157,7 @@
         int my_lenintostr(char *str, char decal);
 
         /// \brief Copy the string you gave in argument.
+        /// WARNING : Don't forget to free the returned string.
         /// \param str Your string you gave
         /// \return (char *) Your string copy
         char *my_strcpy(char *str);
@@ -166,6 +168,7 @@
         int my_strlen(char *str);
 
         /// \brief Copy the string you want into another string.
+        /// WARNING : Don't forget to free the returned string.
         /// \param original Original string you gave
         /// \param add Your string you gave to add
         /// \return (char *) Your entire string
