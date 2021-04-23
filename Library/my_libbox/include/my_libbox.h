@@ -171,6 +171,12 @@
         /// \return (char *) Your entire string
         char *my_concatstring(char *original, char *add);
 
+        /// \brief Compare two string you gave in arguments.
+        /// \param original Original string you gave
+        /// \param compare Your string to compare
+        /// \return Return int 0 if successful, 84 if not.
+        int my_comparestr(char *original, char *compare);
+
     //-------------------------------------------------------------
     //my_tools
 
