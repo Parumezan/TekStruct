@@ -12,7 +12,7 @@ int my_closedir(DIR *folder)
     int check = closedir(folder);
 
     if (check != 0) {
-        
+        my_putstrerror("ERROR: Can't close the folder.");
         return 84;
     }
     return 0;
