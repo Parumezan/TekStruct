@@ -108,6 +108,14 @@
         /// \return Return int 0 if successful, 84 if not.
         int my_closedir(DIR *folder);
 
+        /// \brief Opens a folder as an argument, and gets all the file names,
+        /// and puts them in an array
+        /// WARNING : Don't forget to free the returned 2D-Array.
+        /// \param folderpath Your folder path
+        /// \return Return a malloc array with the content of namesfiles
+        /// in your folder.
+        char **my_filesarray(char *filepath);
+
     //-------------------------------------------------------------
     //my_maths
 
