@@ -134,6 +134,10 @@
         /// letter given as argument
         void *my_calloc(size_t size, char fill);
 
+        /// \brief Free an array you gave.
+        /// \param array (char **) Your array
+        void my_freearray(char **array);
+
     //-------------------------------------------------------------
     //my_string
 
