@@ -37,7 +37,7 @@ char *my_openread(char *filepath)
     fd = readfile(fd, str, s);
     if (fd != 0)
         return NULL;
-    if(!(fd = close(fd)))
+    if ((fd = close(fd)))
         return NULL;
     return str;
 }
