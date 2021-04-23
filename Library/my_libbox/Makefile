@@ -32,6 +32,7 @@ SRC =	\
 		my_string/my_lenintostr.c		\
 		my_string/my_strcpy.c			\
 		my_string/my_strlen.c			\
+		my_string/my_concatstring.c		\
 \
 		my_tools/my_convert.c
 
