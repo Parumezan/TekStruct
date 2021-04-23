@@ -14,8 +14,10 @@
     #include <sys/types.h>
     #include <sys/stat.h>
     #include <fcntl.h>
+    #include <dirent.h>
     #include <unistd.h>
     #include <stdlib.h>
+    #include <time.h>
 //Structures:
 //Prototypes:
 
@@ -66,6 +68,10 @@
         /// \param c The letter 
         void my_putchar(char c);
 
+        /// \brief Displays the letter argument in the error output.
+        /// \param c The letter
+        void my_putchar(char c);
+
         /// \brief Displays the number given as an argument.
         /// \param nb The number
         void my_putnbr(int nb);
@@ -73,6 +79,10 @@
         /// \brief Displays the string given as an argument.
         /// \param str Your string
         void my_putstr(char *str);
+
+        /// \brief Displays the string argument in the error output.
+        /// \param str Your string
+        void my_putstrerror(char *str);
 
         /// \brief Displays your array given in arguments.
         /// \param array Your array.
@@ -84,8 +94,18 @@
         /// \brief Read a file using stat.
         /// WARNING : Don't forget to free the returned string.
         /// \param filepath The filepath to the file to be read
-        /// \return Return a malloc string with the content of the file
+        /// \return Return a malloc string with the content of the file.
         char *my_openread(char *filepath);
+
+        /// \brief Open a folder using dirent
+        /// \param filepath your folder filepath
+        /// \return a DIR *folder for another functions.
+        DIR *my_openfolder(char *folderpath);
+
+        /// \brief Close a folder using dirent
+        /// \param folder Your folder
+        /// \return Return int 0 if successful, 84 if not.
+        int my_closedir(DIR *folder);
 
     //-------------------------------------------------------------
     //my_maths
@@ -95,6 +115,12 @@
         /// \param total The total
         /// \return (int) Your percentage
         int my_percent(int value, int total);
+
+        /// \brief Return a random number between lower / upper value.
+        /// \param lower Your lower value
+        /// \param upper Your upper value
+        /// \return (int) Your random number
+        int my_randomnb(int lower, int upper);
 
     //-------------------------------------------------------------
     //my_memory

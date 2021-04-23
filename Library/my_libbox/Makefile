@@ -13,13 +13,18 @@ SRC =	\
 		my_array/my_strarray.c			\
 \
 		my_display/my_putchar.c			\
+		my_display/my_puterror.c		\
 		my_display/my_putnbr.c			\
 		my_display/my_putstr.c			\
+		my_display/my_putstrerror.c		\
 		my_display/my_putarray.c		\
 \
 		my_files/my_openread.c			\
+		my_files/my_openfolder.c		\
+		my_files/my_closefolder.c		\
 \
 		my_maths/my_percent.c			\
+		my_maths/my_randomnb.c			\
 \
 		my_memory/my_calloc.c			\
 \

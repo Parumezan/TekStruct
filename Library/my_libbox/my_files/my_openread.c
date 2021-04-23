@@ -14,7 +14,7 @@ static int readfile(int fd, char *str, struct stat s)
     check = read(fd, str, s.st_size);
     if (check == -1 || s.st_size == 0) {
         my_putstr("ERROR: The file is empty\n");
-        return 1;
+        return 84;
     }
     return 0;
 }
@@ -31,13 +31,13 @@ char *my_openread(char *filepath)
         return NULL;
     }
     stat(filepath, &s);
-    str = malloc(sizeof(char) * (s.st_size + 1));
-    if (!str)
+    if (!(str = malloc(sizeof(char) * (s.st_size + 1))))
         return NULL;
     str[s.st_size] = '\0';
     fd = readfile(fd, str, s);
     if (fd != 0)
         return NULL;
-    close(fd);
+    if(!(fd = close(fd)))
+        return NULL;
     return str;
 }

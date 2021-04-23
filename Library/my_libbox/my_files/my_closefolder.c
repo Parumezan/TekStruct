@@ -1,0 +1,19 @@
+/*
+** EPITECH PROJECT, 2021
+** TekStruct
+** File description:
+** my_closefolder
+*/
+
+#include "my_libbox.h"
+
+int my_closedir(DIR *folder)
+{
+    int check = closedir(folder);
+
+    if (check != 0) {
+        
+        return 84;
+    }
+    return 0;
+}
