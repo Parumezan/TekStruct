@@ -22,6 +22,7 @@ SRC =	\
 		my_files/my_openread.c			\
 		my_files/my_openfolder.c		\
 		my_files/my_closefolder.c		\
+		my_files/my_filesarray.c		\
 \
 		my_maths/my_percent.c			\
 		my_maths/my_randomnb.c			\
