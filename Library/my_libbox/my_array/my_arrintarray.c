@@ -24,6 +24,8 @@ int **my_arrintarray(char **original, int limit_n, int limit_end)
         array[cpt][size_x] = limit_n;
     }
     array[size_y] = malloc(sizeof(int) * 1);
+    if (!array[size_y])
+        return NULL;
     array[size_y][0] = limit_end;
     return array;
 }

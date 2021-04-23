@@ -17,5 +17,5 @@ DIR *my_openfolder(char *folderpath)
         my_putstrerror(folderpath);
         return NULL;
     }
-    return folderpath;
+    return folder;
 }
