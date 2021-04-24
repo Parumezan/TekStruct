@@ -11,14 +11,14 @@ char **my_arraycopy(char **original)
 {
     char **copy;
     int size_y = 0;
-    int size_x = my_strlen(original[0]);
 
     for (; original[size_y] != NULL; size_y++);
     copy = malloc(sizeof(char *) * (size_y + 1));
     if (!copy)
         return NULL;
     for (size_t cpt = 0; cpt < (size_t)size_y; cpt++) {
-        copy[cpt] = my_calloc(sizeof(char) * (size_x + 1), '\0');
+        copy[cpt] = my_calloc(sizeof(char) * 
+        (my_strlen(original[cpt]) + 1), '\0');
         if (!copy[cpt])
             return NULL;
     }
