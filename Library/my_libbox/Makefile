@@ -18,6 +18,7 @@ SRC =	\
 		my_display/my_putstr.c			\
 		my_display/my_putstrerror.c		\
 		my_display/my_putarray.c		\
+		my_display/my_putintarray.c		\
 \
 		my_files/my_openread.c			\
 		my_files/my_openfolder.c		\
@@ -29,6 +30,7 @@ SRC =	\
 \
 		my_memory/my_calloc.c			\
 		my_memory/my_freearray.c		\
+		my_memory/my_freeintarray.c		\
 \
 		my_string/my_iterchar.c			\
 		my_string/my_lenintostr.c		\
@@ -37,7 +39,8 @@ SRC =	\
 		my_string/my_concatstring.c		\
 		my_string/my_comparestr.c		\
 \
-		my_tools/my_convert.c
+		my_tools/my_convert.c			\
+		my_tools/my_inttostr.c
 
 BUILD_DIR = build
 OBJ = $(SRC:%.c=$(BUILD_DIR)/%.o)

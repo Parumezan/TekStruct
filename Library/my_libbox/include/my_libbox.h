@@ -38,22 +38,23 @@
         /// \param decal The letter to separate your string into an array
         void my_fillstrarray(char *str, char **array, char decal);
 
+        /// \brief Copy a char ** into a int ** |
+        /// Be careful ; int **array memory == char **array memory |
+        /// This function performs the ascii transformation
+        /// \param array The int array you want to fill up
+        /// \param original The char array you want to copy
+        void my_fillintarray(int **array, char **original);
+
         /// \brief Copy an array into another array.
         /// WARNING : Don't forget to free the returned 2D-Array.
         /// \param array The array you gave to copy
         /// \return Return a malloc array with the 
         /// content of the array you gave
         char **my_arraycopy(char **original);
-
-        /// \brief Copy an array into another array.
-        /// \param array The array you gave to copy
-        /// \return Return a malloc array with the 
-        /// content of the array you gave
-        void my_fillintarray(int **array, int fillup, int limit_n, 
-        int limit_end);
         
         /// \brief Copy an array into an int array.
-        /// WARNING : Don't forget to free the returned 2D-Array.
+        /// WARNING : Don't forget to free the returned 2D-Array | Don't
+        /// forget to fill up this empty int array.
         /// \param array (char **) The array you gave to copy
         /// \param limit_n The limit / '\n' of an char **array
         /// \param limit_end The limit / '\0' of an char **array
@@ -87,6 +88,12 @@
         /// \brief Displays your array given in arguments.
         /// \param array Your array.
         void my_putarray(char **array);
+
+        /// \brief Displays your int array given in arguments.
+        /// \param array Your int array
+        /// \param limit_n The '\n' into a char array
+        /// \param limit_end The '\0' into a char array
+        void my_putintarray(int **array, int limit_n, int limit_end);
 
     //-------------------------------------------------------------
     //my_files
@@ -147,6 +154,11 @@
         /// \param array (char **) Your array
         void my_freearray(char **array);
 
+        /// \brief Free an int array you gave.
+        /// \param array (int **) Your array
+        /// \param limit_end The "null" into a char **
+        void my_freeintarray(int **array, int limit_end);
+
     //-------------------------------------------------------------
     //my_string
 
@@ -196,5 +208,12 @@
         /// \param str Your string - number
         /// \return (int) Your number
         int my_convert(char *str);
+
+        /// \brief Return the number into a string (ascii conversion) 
+        /// given as an argument.
+        /// WARNING : Don't forget to free the returned string.
+        /// \param nb Your number
+        /// \return (char *) Your str - number
+        char *my_inttostr(int nb);
 
 #endif /* !MY_LIBBOX_H_ */

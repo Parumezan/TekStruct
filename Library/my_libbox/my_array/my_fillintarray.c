@@ -7,10 +7,10 @@
 
 #include "my_libbox.h"
 
-void my_fillintarray(int **array, int fillup, int limit_n, int limit_end)
+void my_fillintarray(int **array, char **original)
 {
-    for (size_t leny = 0; array[leny][0] != limit_end; leny++) {
-        for (size_t lenx = 0; array[leny][lenx] != limit_n; lenx++)
-            array[leny][lenx] = fillup;
+    for (size_t leny = 0; original[leny] != NULL; leny++) {
+        for (size_t lenx = 0; original[leny][lenx] != '\0'; lenx++)
+            array[leny][lenx] = original[leny][lenx] - 48;
     }
 }
