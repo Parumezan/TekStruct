@@ -7,6 +7,7 @@
 
 SRC =	\
 		my_array/my_arraycopy.c			\
+		my_array/my_intarraycopy.c		\
 		my_array/my_arrintarray.c		\
 		my_array/my_fillintarray.c		\
 		my_array/my_fillstrarray.c		\
@@ -36,6 +37,7 @@ SRC =	\
 		my_string/my_lenintostr.c		\
 		my_string/my_strcpy.c			\
 		my_string/my_strlen.c			\
+		my_string/my_intlen.c			\
 		my_string/my_concatstring.c		\
 		my_string/my_comparestr.c		\
 \
