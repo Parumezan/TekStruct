@@ -62,6 +62,15 @@
         /// content of the array you gave
         int **my_arrintarray(char **original, int limit_n, int limit_end);
 
+        /// \brief Copy an int array into another int array.
+        /// WARNING : Don't forget to free the returned 2D-Array.
+        /// \param original The array you gave to copy
+        /// \param limit_n The '\n' of your original array
+        /// \param limit_end The '\0' of your original array
+        /// \return Return a malloc array with the 
+        /// content of the array you gave
+        int **my_intarraycopy(int **original, int limit_n, int limit_end);
+
     //-------------------------------------------------------------
     //my_display
 
@@ -186,6 +195,12 @@
         /// \param str Your string
         /// \return The length of the string
         int my_strlen(char *str);
+
+        /// \brief Return the lenght of your int string given as an argument.
+        /// \param line Your string
+        /// \param limit_end The '\0' of your string
+        /// \return The length of the int string
+        int my_intlen(int *line, int limit_end);
 
         /// \brief Copy the string you want into another string.
         /// WARNING : Don't forget to free the returned string.
