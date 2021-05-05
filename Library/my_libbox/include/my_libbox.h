@@ -90,6 +90,11 @@
         /// \param str Your string
         void my_putstr(char *str);
 
+        /// \brief Displays the int-string given as an argument.
+        /// \param line Your int-string
+        /// \param limit_end Your '\0' into an (int *)
+        void my_putintline(int *line, int limit_end);
+
         /// \brief Displays the string argument in the error output.
         /// \param str Your string
         void my_putstrerror(char *str);

@@ -17,6 +17,7 @@ SRC =	\
 		my_display/my_puterror.c		\
 		my_display/my_putnbr.c			\
 		my_display/my_putstr.c			\
+		my_display/my_putintline.c		\
 		my_display/my_putstrerror.c		\
 		my_display/my_putarray.c		\
 		my_display/my_putintarray.c		\
