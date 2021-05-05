@@ -215,6 +215,14 @@
         /// \return Return int 0 if successful, 84 if not.
         int my_comparestr(char *original, char *compare);
 
+        /// \brief Copy the int * string you gave in argument.
+        /// WARNING : Don't forget to free the returned string.
+        /// \param original Your string you gave
+        /// \param limit_end The '\0' of your string
+        /// \param nfree enter '1' if you want to free the "original"
+        /// \return (int *) Your int-string copy
+        int *my_intcpy(int *original, int limit_end, int nfree);
+
     //-------------------------------------------------------------
     //my_tools
 
