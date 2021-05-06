@@ -152,6 +152,13 @@
         /// \return (int) Your random number
         int my_randomnb(int lower, int upper);
 
+        /// \brief Upgrade of the inttostr for size_t number.
+        /// \param lower Your lower value
+        /// \param size Size of your number (1234 = size of 4 int)
+        /// \param limit_end Your '\0' into a string
+        /// \return (int *) Your number into a int *
+        int *my_xmodulo(size_t nb, int size, int limit_end);
+
     //-------------------------------------------------------------
     //my_memory
 

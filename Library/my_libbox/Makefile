@@ -29,6 +29,7 @@ SRC =	\
 \
 		my_maths/my_percent.c			\
 		my_maths/my_randomnb.c			\
+		my_maths/my_xmodulo.c			\
 \
 		my_memory/my_calloc.c			\
 		my_memory/my_freearray.c		\
