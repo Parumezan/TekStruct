@@ -51,7 +51,7 @@
         /// \return Return a malloc array with the 
         /// content of the array you gave
         char **my_arraycopy(char **original);
-        
+
         /// \brief Copy an array into an int array.
         /// WARNING : Don't forget to free the returned 2D-Array | Don't
         /// forget to fill up this empty int array.
@@ -85,7 +85,7 @@
         /// \brief Displays the number given as an argument.
         /// \param nb The number
         void my_putnbr(int nb);
-        
+
         /// \brief Displays the string given as an argument.
         /// \param str Your string
         void my_putstr(char *str);

@@ -17,7 +17,7 @@ char **my_arraycopy(char **original)
     if (!copy)
         return NULL;
     for (size_t cpt = 0; cpt < (size_t)size_y; cpt++) {
-        copy[cpt] = my_calloc(sizeof(char) * 
+        copy[cpt] = my_calloc(sizeof(char) *
         (my_strlen(original[cpt]) + 1), '\0');
         if (!copy[cpt])
             return NULL;

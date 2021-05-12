@@ -7,7 +7,7 @@
 
 #include "my_libbox.h"
 
-static void fill_up_array(int **copy, int **original, int limit_n, 
+static void fill_up_array(int **copy, int **original, int limit_n,
 int limit_end)
 {
     for (size_t leny = 0; original[leny][0] != limit_end; leny++) {
@@ -16,7 +16,7 @@ int limit_end)
     }
 }
 
-static int **end_array(int **copy, int **original, int size_y, 
+static int **end_array(int **copy, int **original, int size_y,
 int limit_end)
 {
     copy[size_y] = malloc(sizeof(int) * 1);

@@ -23,5 +23,5 @@ int my_lenintostr(char *str, char decal)
     }
     if (count > check)
         check = count;
-    return check; 
+    return check;
 }
