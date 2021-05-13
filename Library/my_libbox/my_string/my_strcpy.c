@@ -7,7 +7,7 @@
 
 #include "my_libbox.h"
 
-char *my_strcpy(char *str)
+char *my_strcpy(char *str, int needfree)
 {
     char *copy = NULL;
     int len = my_strlen(str);
@@ -19,5 +19,7 @@ char *my_strcpy(char *str)
         return NULL;
     for (size_t cpt = 0; str[cpt] != '\0'; cpt++)
         copy[cpt] = str[cpt];
+    if (needfree == 1)
+        free(str);
     return copy;
 }

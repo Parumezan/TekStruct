@@ -200,8 +200,9 @@
         /// \brief Copy the string you gave in argument.
         /// WARNING : Don't forget to free the returned string.
         /// \param str Your string you gave
+        /// \param free If you want to free "str", type 1
         /// \return (char *) Your string copy
-        char *my_strcpy(char *str);
+        char *my_strcpy(char *str, int needfree);
 
         /// \brief Return the lenght of your string given as an argument.
         /// \param str Your string
