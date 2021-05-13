@@ -70,7 +70,7 @@ static char **arrayfound(DIR *folder, int size_y)
         if (check_name(buffer) == 0) {
             if (!buffer)
                 return NULL;
-            array[count] = my_strcpy(buffer->d_name);
+            array[count] = my_strcpy(buffer->d_name, 0);
             if (!array[count])
                 return NULL;
             count++;
