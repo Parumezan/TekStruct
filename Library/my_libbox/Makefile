@@ -11,6 +11,7 @@ SRC =	\
 		my_array/my_arrintarray.c		\
 		my_array/my_fillintarray.c		\
 		my_array/my_fillstrarray.c		\
+		my_array/my_concatarray.c		\
 		my_array/my_strarray.c			\
 \
 		my_display/my_putchar.c			\

@@ -71,6 +71,15 @@
         /// content of the array you gave
         int **my_intarraycopy(int **original, int limit_n, int limit_end);
 
+        /// \brief Copy an char **array into another char **.
+        /// WARNING : Don't forget to free the returned 2D-Array.
+        /// \param original The array you gave to copy
+        /// \param str The '\n' of your original array
+        /// \param nfree free manage (1 = array 2 = str 3 array & str)
+        /// \return Return a malloc array with the 
+        /// content of the str you gave
+        char **my_concatarray(char **original, char *str, int nfree);
+
     //-------------------------------------------------------------
     //my_display
 
