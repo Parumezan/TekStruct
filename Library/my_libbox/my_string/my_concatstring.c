@@ -7,7 +7,7 @@
 
 #include "my_libbox.h"
 
-char *my_concatstring(char *original, char *add)
+char *my_concatstring(char *original, char *add, int nfree)
 {
     size_t cpt = 0;
     int orilen = my_strlen(original);
@@ -20,5 +20,9 @@ char *my_concatstring(char *original, char *add)
         str[cpt] = original[cpt];
     for (size_t count = 0; add[count] != '\0'; cpt++, count++)
         str[cpt] = add[count];
+    if (nfree = 1 || nfree == 3)
+        free(original);
+    if (nfree = 2 || nfree == 3)
+        free(add);
     return str;
 }

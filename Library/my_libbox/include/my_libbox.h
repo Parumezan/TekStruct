@@ -228,8 +228,9 @@
         /// WARNING : Don't forget to free the returned string.
         /// \param original Original string you gave
         /// \param add Your string you gave to add
+        /// \param nfree free string (1 original / 2 add / 3 both)
         /// \return (char *) Your entire string
-        char *my_concatstring(char *original, char *add);
+        char *my_concatstring(char *original, char *add, int nfree);
 
         /// \brief Compare two string you gave in arguments.
         /// \param original Original string you gave
