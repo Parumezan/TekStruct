@@ -81,6 +81,14 @@
         char **my_concatarray(char **original, char *str, int nfree);
 
     //-------------------------------------------------------------
+    //my_ctype
+
+        /// \brief Tell you if your char is alpha
+        /// \param c your char
+        /// \return Return 1 if is it or 0 if not
+        int my_isalpha(char c);
+
+    //-------------------------------------------------------------
     //my_display
 
         /// \brief Displays the letter given as an argument.
