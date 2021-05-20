@@ -9,12 +9,15 @@
 
 static char *lastmanage(char **copy, char *str, int nfree)
 {
+    char *save = my_strcpy(str, 0);
+
+    if (!save)
+        return NULL;
     if (nfree == 1 || nfree == 3)
         my_freearray(copy);
-    str = my_strcpy(str, 0);
     if (nfree == 2 || nfree == 3)
         free(str);
-    return str;
+    return save;
 }
 
 char **my_concatarray(char **original, char *str, int nfree)
