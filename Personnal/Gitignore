@@ -1,6 +1,7 @@
 # Gitignore File for TekStruct.sh
 
 # Folders
+.vscode
 build/
 ananas/
 

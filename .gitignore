@@ -2,3 +2,4 @@ Gitignore for Tekstruct
 
 # Folders
 Release/
+.vscode
