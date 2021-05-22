@@ -88,6 +88,11 @@
         /// \return Return 1 if is it or 0 if not
         int my_isalpha(char c);
 
+        /// \brief Tell you if your char is a number
+        /// \param c your char
+        /// \return Return 1 if is it or 0 if not
+        int my_isnumber(char c);
+
     //-------------------------------------------------------------
     //my_display
 

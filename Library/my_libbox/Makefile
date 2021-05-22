@@ -15,6 +15,7 @@ SRC =	\
 		my_array/my_strarray.c			\
 \
 		my_ctype/my_isalpha.c			\
+		my_ctype/my_isnumber.c			\
 \
 		my_display/my_putchar.c			\
 		my_display/my_puterror.c		\
