@@ -7,15 +7,10 @@
 
 #include "my_libbox.h"
 
-char **my_strarray(char *str, char decal)
+static char **do_array(int size_y, int size_x)
 {
     char **array;
-    int size_y = my_iterchar(str, decal) + 1;
-    int size_x = my_lenintostr(str, decal);
-    int len = my_strlen(str) - 1;
 
-    if (str[len] == decal)
-        str[len] = '\0';
     array = malloc(sizeof(char *) * (size_y + 1));
     if (!array)
         return NULL;
@@ -25,6 +20,26 @@ char **my_strarray(char *str, char decal)
             return NULL;
     }
     array[size_y] = NULL;
+    return array;
+}
+
+char **my_strarray(char *str, char decal)
+{
+    int size_y = 0;
+    int size_x = 0;
+    int len = 0;
+    char **array = NULL;
+
+    if (!str)
+        return NULL;
+    size_y = my_iterchar(str, decal) + 1;
+    size_x = my_lenintostr(str, decal);
+    len = my_strlen(str) - 1;
+    if (str[len] == decal)
+        str[len] = '\0';
+    array = do_array(size_y, size_x);
+    if (!array)
+        return NULL;
     my_fillstrarray(str, array, decal);
     return array;
 }
