@@ -27,6 +27,7 @@ SRC =	\
 		my_display/my_putintarray.c		\
 \
 		my_files/my_openread.c			\
+		my_files/my_openwrite.c			\
 		my_files/my_openfolder.c		\
 		my_files/my_closefolder.c		\
 		my_files/my_filesarray.c		\

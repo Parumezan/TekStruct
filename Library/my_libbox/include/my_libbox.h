@@ -140,6 +140,13 @@
         /// \return Return a malloc string with the content of the file.
         char *my_openread(char *filepath);
 
+        /// \brief Create a file and write to it
+        /// \param filename (filepath)
+        /// The filename or filepath to read or create
+        /// \param str The string you want to include in your file
+        /// \return Return a error code.
+        int my_openwrite(char *filename, char *str);
+
         /// \brief Open a folder using dirent
         /// WARNING : Don't forget to close the returned folder.
         /// \param filepath your folder filepath
