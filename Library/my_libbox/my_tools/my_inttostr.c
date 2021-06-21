@@ -9,9 +9,11 @@
 
 char *my_inttostr(int nb)
 {
-    char *str = malloc(sizeof(char) * 1024);
     int ptr = -1;
+    char *str = malloc(sizeof(char) * 1024);
 
+    if (!str)
+        return NULL;
     if (nb == 0) {
         str[0] = '0';
         str[1] = '\0';
