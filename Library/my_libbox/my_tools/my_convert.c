@@ -11,6 +11,8 @@ int my_convert(char *str)
     int count = 0;
     int signe = 1;
 
+    if (!str)
+        return 0;
     if (str[count] == '-') {
         signe = -1;
         count++;
