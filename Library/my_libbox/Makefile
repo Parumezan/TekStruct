@@ -32,6 +32,7 @@ SRC =	\
 		my_files/my_closefolder.c		\
 		my_files/my_filesarray.c		\
 \
+		my_maths/my_ispair.c			\
 		my_maths/my_percent.c			\
 		my_maths/my_randomnb.c			\
 		my_maths/my_xmodulo.c			\

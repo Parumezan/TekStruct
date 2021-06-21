@@ -175,6 +175,11 @@
         /// \return (int) Your percentage
         int my_percent(int value, int total);
 
+        /// \brief Return if your number is pair or not.
+        /// \param nb The number you want
+        /// \return (int) 0 if it's pair, or 1 / -1 if not
+        int my_ispair(int nb);
+
         /// \brief Return a random number between lower / upper value.
         /// \param lower Your lower value
         /// \param upper Your upper value
