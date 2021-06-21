@@ -7,24 +7,37 @@
 
 #include "my_libbox.h"
 
-char *my_inttostr(int nb)
+static char *fill_intstr(int cpt, int save, int pastille)
 {
-    int ptr = -1;
-    char *str = malloc(sizeof(char) * 1024);
+    char *str = my_calloc((sizeof(char) * (cpt + 2)), 0);
 
     if (!str)
         return NULL;
-    if (nb == 0) {
-        str[0] = '0';
-        str[1] = '\0';
-        return (str);
+    for (; cpt > -1; cpt--) {
+        str[cpt] = ((save % 10) + 48);
+        save /= 10;
     }
-    for (int i = nb; i != 0; ptr++)
-        i /= 10;
-    str[ptr + 1] = '\0';
-    for (int i = nb; i != 0; ptr--) {
-        str[ptr] = (i % 10)  + '0';
-        i /= 10;
-    }
+    if (pastille == 1)
+        str[0] = '-';
     return str;
+}
+
+char *my_inttostr(int nb)
+{
+    int save = nb;
+    int pastille = 0;
+    int cpt = 0;
+
+    if (nb < 0) {
+        save *= -1;
+        pastille = 1;
+    }
+    for (; save > 0; save /= 10, cpt++);
+    cpt--;
+    save = nb;
+    if (pastille == 1) {
+        cpt += 1;
+        save = nb * -1;
+    }
+    return fill_intstr(cpt, save, pastille);
 }
