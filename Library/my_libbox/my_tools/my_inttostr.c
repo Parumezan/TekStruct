@@ -19,7 +19,7 @@ char *my_inttostr(int nb)
         save *= -1;
         size = 1;
     }
-    for (int check = save; check > 0; check /= 10, cpt++);
+    for (check = save; check > 0; check /= 10, cpt++);
     size += cpt;
     if (!(str = my_calloc(sizeof(char) * (size + 1), 0)))
         return NULL;
