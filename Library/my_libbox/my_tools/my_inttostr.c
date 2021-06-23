@@ -7,7 +7,7 @@
 
 #include "my_libbox.h"
 
-char *my_inttostr(int nb)
+static char *my_reelinttostr(int nb)
 {
     int cpt = 0;
     int save = nb;
@@ -29,4 +29,18 @@ char *my_inttostr(int nb)
         str[check] = ((save % 10) + 48);
     size > cpt ? str[0] = '-' : 0;
     return str;
+}
+
+char *my_inttostr(int nb)
+{
+    char *result = NULL;
+
+    if (nb == 0) {
+        result = my_calloc((sizeof(char) * 2), 0);
+        if (!result)
+            return NULL;
+        result[0] = 48;
+        return result;
+    }
+    return my_reelinttostr(nb);
 }
