@@ -5,7 +5,8 @@
 ## Makefile
 ##
 
-SRC =	src/main.c			
+SRC =	\
+		src/main.c
 
 BUILD_DIR = build
 OBJ	= $(SRC:%.c=$(BUILD_DIR)/%.o)
@@ -46,7 +47,9 @@ lib:
 ## Debug
 debug: CFLAGS += -g
 debug: fclean lib h_debug $(OUTPUT)
-	valgrind --leak-check=full --track-origins=yes -s ./$(OUTPUT) $(filter-out $@, $(MAKECMDGOALS)) 2> trace
+	@echo -n "PROGRAM ARGUMENTS(Enter for None): "; \
+	read PROGRAM_ARGUMENTS; \
+	valgrind --track-origins=yes --leak-check=full ./$(OUTPUT) $${PROGRAM_ARGUMENTS} 2> trace
 
 h_normal:
 	@echo " dPPPb8  dPPYb  8b    d8 88PPYb 88 88     88 88b 88  dPPPb8        "

@@ -14,7 +14,7 @@ static char *my_reelinttostr(int nb)
     int size = 0;
     int check = 0;
     char *str = NULL;
-    
+
     if (nb < 0) {
         save *= -1;
         size = 1;
