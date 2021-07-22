@@ -1,9 +1,8 @@
-# Gitignore File for TekStruct.sh
+# Gitignore File
 
 # Folders
 .vscode
 build/
-ananas/
 
 # Files
 *.o

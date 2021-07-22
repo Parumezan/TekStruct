@@ -3,3 +3,4 @@ Gitignore for Tekstruct
 # Folders
 Release/
 .vscode
+Library/my_libbag/

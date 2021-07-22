@@ -1,8 +1,13 @@
 /*
-** EPITECH PROJECT, 2020
-** CerStruct
-** File description:
-** tekstruct
+** File: tekstruct.h
+** Project: include
+** File Created: Tuesday, 13th July 2021 10:10:32 pm
+** Author: Jean-Baptiste Brocherie
+** -----
+** Last Modified: Tuesday, 13th July 2021 10:10:44 pm
+** Modified By: Jean-Baptiste Brocherie
+** -----
+** Copyright JB 2021
 */
 
 #ifndef TEKSTRUCT_H_
@@ -10,17 +15,12 @@
 
 //Defines:
     //Error:
+        #define MY_NORMAL 0
+        #define MY_ERROR 84
 //Includes:
     #include <unistd.h>
     #include <stdlib.h>
 //Structures:
 //Prototypes:
-    //MiniLib (/lib)
-        void my_putchar(char c);
-        void my_putnbr(int nb);
-        void my_putstr(char *str);
-        void my_putarray(char **array);
-        int my_strlen(char *str);
-        int my_convert(char *str);
 
 #endif /* !TEKSTRUCT_H_ */
