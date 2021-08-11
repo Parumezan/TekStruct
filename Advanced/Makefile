@@ -10,14 +10,14 @@ SRC =	\
 
 BUILD_DIR = build
 OBJ	= $(SRC:%.c=$(BUILD_DIR)/%.o)
+CC = gcc
 
 ## Binary Name
 OUTPUT = TekStruct
 
 ## Flags
 CFLAGS = -Wall -Wextra -I ./include/ -I ./lib/hlib 
-LDFLAGS = -L./lib/exec	\
-#-l _my_libc
+LDFLAGS = -L./lib/exec #-l_my_libbox
 
 ## Rules
 
@@ -29,14 +29,14 @@ $(BUILD_DIR)/%.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OUTPUT): $(OBJ)
-	gcc -o $(OUTPUT) $(OBJ) $(LDFLAGS)
+	gcc -o $(OUTPUT) $(OBJ) $(CFLAGS) $(LDFLAGS)
 
 clean:
 	rm -f $(OBJ)
 	make clean -C ./lib
 
 fclean:
-	rm -f $(OBJ)
+	rm -fr $(BUILD_DIR)
 	rm -f $(OUTPUT)
 	rm -f trace
 	make fclean -C ./lib
