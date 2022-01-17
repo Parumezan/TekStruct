@@ -29,7 +29,7 @@ $(BUILD_DIR)/%.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OUTPUT): $(OBJ)
-	gcc -o $(OUTPUT) $(OBJ) $(CFLAGS) $(LDFLAGS)
+	$(CC) -o $(OUTPUT) $(OBJ) $(CFLAGS) $(LDFLAGS)
 
 clean:
 	rm -f $(OBJ)
