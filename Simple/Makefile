@@ -16,6 +16,7 @@ SRC = 	lib/my_putchar.c	\
 
 BUILD_DIR = build
 OBJ	= $(SRC:%.c=$(BUILD_DIR)/%.o)
+CC = gcc
 
 ## Binary Name
 OUTPUT = TekStruct
