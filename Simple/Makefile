@@ -5,28 +5,21 @@
 ## Makefile
 ##
 
-SRC = 	lib/my_putchar.c	\
-		lib/my_putstr.c		\
-		lib/my_putarray.c	\
-		lib/my_putnbr.c		\
-		lib/my_strlen.c		\
-		lib/my_convert.c	\
-\
-		src/main.c 			
+SRC =	\
+		src/main.c
 
 BUILD_DIR = build
 OBJ	= $(SRC:%.c=$(BUILD_DIR)/%.o)
 CC = gcc
 
 ## Binary Name
-OUTPUT = TekStruct
+OUTPUT = Tekstruct
 
 ## Flags
 CFLAGS = -I include/ -Wall -Wextra
 
 ## Rules
-
-all: $(OUTPUT)
+all: header $(OUTPUT)
 
 $(BUILD_DIR)/%.o: %.c
 	@mkdir -p $(@D)
@@ -34,7 +27,7 @@ $(BUILD_DIR)/%.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OUTPUT): $(OBJ)
-	$(CC) -o $(OUTPUT) $(OBJ)
+	$(CC) -o $(OUTPUT) $(OBJ) $(CFLAGS)
 
 clean:
 	rm -f $(OBJ)
@@ -43,11 +36,12 @@ fclean: clean
 	rm -f $(OUTPUT)
 	rm -f trace
 
-## Debug
-debug: CFLAGS += -g
-debug: fclean head lib $(OUTPUT)
-	valgrind --leak-check=full --track-origins=yes -s ./$(OUTPUT) $(filter-out $@, $(MAKECMDGOALS)) 2> trace
-
 re: fclean all
 
-.PHONY: all clean fclean debug re
+header:
+	@echo " dPPPb8  dPPYb  8b    d8 88PPYb 88 88     88 88b 88  dPPPb8        "
+	@echo "dP   'P dP   Yb 88b  d88 88__dP 88 88     88 88Yb88 dP   'P        "
+	@echo "Yb      Yb   dP 88YbdP88 88PPP  88 88  .o 88 88 Y88 Yb  P88 .o. .o."
+	@echo " YboodP  YbodP  88 YY 88 88     88 88ood8 88 88  Y8  YboodP 'P' 'P'"
+
+.PHONY: all clean fclean debug re header
