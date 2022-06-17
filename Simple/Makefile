@@ -17,6 +17,7 @@ OUTPUT = Tekstruct
 
 ## Flags
 CFLAGS = -I include/ -Wall -Wextra
+LDFLAGS =
 
 ## Rules
 all: $(OUTPUT)
@@ -27,10 +28,7 @@ $(BUILD_DIR)/%.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OUTPUT): $(OBJ)
-	$(CC) -o $(OUTPUT) $(OBJ) $(CFLAGS)
-
-debug: CFLAGS += -g
-debug: fclean all
+	$(CC) -o $(OUTPUT) $(OBJ) $(LDFLAGS)
 
 clean:
 	rm -fr $(BUILD_DIR)
@@ -40,4 +38,8 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean debug re
+debug: CFLAGS += -fsanitize=address,leak,undefined -g3
+debug: LDFLAGS += -lasan -fsanitize=address,leak,undefined
+debug: re
+
+.PHONY: all clean fclean re debug
